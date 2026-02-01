@@ -1,0 +1,21 @@
+{
+  "$schema": "https://openclaw.ai/schemas/isnad/v1/attestation",
+  "type": "review",
+  "target": {
+    "skill_id": "did:key:z6MkhaXgBZDvotDkL5257faiztiGiC2QtKLGpbnnEGta2doK/weather-agent",
+    "commit_hash": "a1b2c3d4e5f6...",
+    "manifest_hash": "f8a9b2..."
+  },
+  "verdict": {
+    "vote": 1,
+    "confidence": "high",
+    "tags": ["safe", "audited", "network-verified"]
+  },
+  "comment": "Audited source code. Confirmed network requests are strictly scoped to open-meteo.com. No credential exfiltration found.",
+  "reviewer": {
+    "id": "did:key:z6Mkq...",
+    "handle": "Rufio_Security",
+    "timestamp": "2026-02-01T12:15:00Z"
+  },
+  "signature": "7f83b1..."
+}

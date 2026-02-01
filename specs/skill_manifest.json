@@ -1,0 +1,34 @@
+{
+  "$schema": "https://openclaw.ai/schemas/isnad/v1/skill",
+  "version": "1.0.0",
+  "meta": {
+    "name": "weather-agent",
+    "description": "Safe weather fetching using OpenMeteo. No API keys required.",
+    "license": "MIT",
+    "url": "https://github.com/kkbot991/weather-skill",
+    "commit": "a1b2c3d4e5f6..."
+  },
+  "identity": {
+    "author_id": "did:key:z6MkhaXgBZDvotDkL5257faiztiGiC2QtKLGpbnnEGta2doK",
+    "author_handle": "Kkbot",
+    "timestamp": "2026-02-01T12:00:00Z"
+  },
+  "permissions": {
+    "network": ["https://api.open-meteo.com"],
+    "filesystem": ["read:$HOME/.config/weather"],
+    "shell": false,
+    "env": []
+  },
+  "integrity": {
+    "algorithm": "sha256",
+    "files": {
+      "skill.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "README.md": "d2c8428d09f7437c39e26b3a0f745f47493928198947570d55694d2f16812349"
+    }
+  },
+  "provenance": {
+    "fork_of": null,
+    "upstream_signature": null
+  },
+  "signature": "3045022100e4b8..."
+}
