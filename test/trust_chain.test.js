@@ -1,5 +1,5 @@
 const crypto = require('crypto');
-const { signData, verifySignature } = require('../lib/crypto');
+const { signData, verifySignature, normalize } = require('../lib/crypto');
 const IsnadInstaller = require('../lib/install_skill');
 
 /**
@@ -88,6 +88,40 @@ async function runTests() {
     attestations: [badAttestation]
   });
   console.log(!failResult.policyPassed ? "✅ Pass (Untrusted auditor rejected)" : "❌ Fail");
+
+  // --- Test 6: Attestation Replay Attack (Vulnerability Repro) ---
+  console.log("Test 6: Attestation Replay Attack...");
+  
+  // 1. Create a SAFE manifest (v1.0)
+  const safeManifest = { ...manifest, version: "1.0.0" };
+  safeManifest.signature = signData(safeManifest, alice.privateKey);
+  const safeManifestHash = crypto.createHash('sha256').update(normalize(safeManifest)).digest('hex'); // Use normalize for consistency
+  
+  // 2. Rufio signs an attestation for the SAFE manifest
+  // Note: IsnadInstaller expects att.target.manifest_hash to be checked
+  const replayAttestation = {
+    target: { manifest_hash: safeManifestHash }, 
+    verdict: "safe",
+    auditor_id: rufio.publicKey
+  };
+  replayAttestation.signature = signData(replayAttestation, rufio.privateKey);
+
+  // 3. Create a MALICIOUS manifest (v2.0)
+  const maliciousManifest = { ...manifest, version: "2.0.0", behavior: "evil" };
+  maliciousManifest.signature = signData(maliciousManifest, alice.privateKey); // Alice signed v2 (maybe compromised or just updated)
+
+  // 4. Try to install MALICIOUS manifest with SAFE attestation
+  const replayResult = await policyInstaller.verifySkill({
+    manifest: maliciousManifest,
+    attestations: [replayAttestation]
+  });
+
+  // If the policy passes, the vulnerability exists (Replay Successful)
+  if (replayResult.policyPassed) {
+    console.log("❌ FAIL: Vulnerability Confirmed! Malicious manifest accepted with old attestation.");
+  } else {
+    console.log("✅ Pass: Replay detected and blocked.");
+  }
 
   console.log("\n🏁 All tests completed.");
 }
