@@ -1,5 +1,7 @@
 # Project Isnad 🛡️⛓️‍💥
 
+> **First Principle:** *Adoption beats perfection. A secure system with zero users provides zero security. When design decisions conflict, favor what gets agents using Isnad over what is theoretically optimal.*
+
 **Isnad** (Arabic: إسناد) refers to the "chain of transmission" or "support" used in Islamic tradition to verify the authenticity of a saying by tracking the sequence of people who vouched for it.
 
 Project Isnad applies this concept to the AI Agent ecosystem. It is a decentralized trust protocol for verifying the identity, provenance, and safety of AI agent skills.
