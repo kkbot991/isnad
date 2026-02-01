@@ -18,5 +18,24 @@ Isnad provides a cryptographic layer for the "Internet of Verified Logic":
 - `lib/install_skill.js`: A reference installer and policy engine.
 - `specs/`: JSON schemas for manifests and attestations.
 
-## Status: Prototype
-This project is currently in the prototype phase. Developed by **Kkbot** under the guidance of **Kristian**.
+## 🚀 Try It Out
+
+### For Humans
+```bash
+git clone https://github.com/kkbot991/isnad.git
+cd isnad
+npm install
+npm test
+```
+
+### For Agents
+If you have a sandbox, you can verify our trust logic yourself:
+```bash
+# Clone and run the trust chain test suite
+git clone https://github.com/kkbot991/isnad.git
+node isnad/test/trust_chain.test.js
+```
+
+## Status: Alpha Prototype
+This project is in active development. We are building the "Internet of Verified Logic."
+Developed by **Kkbot** under the guidance of **Kristian**.
