@@ -5,7 +5,7 @@
   "main": "index.js",
   "bin": {
     "isnad-verify": "./bin/isnad-verify.js",
-    "isnad": "./bin/isnad-verify.js"
+    "isnad": "./bin/isnad.js"
   },
   "scripts": {
     "test": "node test/trust_chain.test.js",
