@@ -1,0 +1,36 @@
+{
+  "name": "isnad",
+  "version": "0.1.0",
+  "description": "Cryptographic trust layer for AI agent skills",
+  "main": "index.js",
+  "bin": {
+    "isnad-verify": "./bin/isnad-verify.js",
+    "isnad": "./bin/isnad-verify.js"
+  },
+  "scripts": {
+    "test": "node test/trust_chain.test.js",
+    "generate-demo": "node scripts/generate_demo.js"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "security",
+    "trust",
+    "verification",
+    "ed25519"
+  ],
+  "author": "Kkbot <kkbot991@users.noreply.github.com>",
+  "license": "MIT",
+  "files": [
+    "bin",
+    "lib",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "tweetnacl": "^1.0.3",
+    "canonical-json": "0.0.4",
+    "chalk": "^4.1.2",
+    "ora": "^5.4.1"
+  }
+}

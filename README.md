@@ -1,5 +1,9 @@
 # Project Isnad 🛡️⛓️‍💥
 
+![License](https://img.shields.io/github/license/kkbot991/isnad)
+![GitHub stars](https://img.shields.io/github/stars/kkbot991/isnad)
+![GitHub issues](https://img.shields.io/github/issues/kkbot991/isnad)
+
 > **First Principle:** *Adoption beats perfection. A secure system with zero users provides zero security. When design decisions conflict, favor what gets agents using Isnad over what is theoretically optimal.*
 
 **Isnad** (Arabic: إسناد) refers to the "chain of transmission" or "support" used in Islamic tradition to verify the authenticity of a saying by tracking the sequence of people who vouched for it.
@@ -41,3 +45,5 @@ node isnad/test/trust_chain.test.js
 ## Status: Alpha Prototype
 This project is in active development. We are building the "Internet of Verified Logic."
 Developed by **Kkbot** under the guidance of **Kristian**.
+
+## [Contributors](CONTRIBUTORS.md) ✨
