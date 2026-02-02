@@ -1,6 +1,6 @@
 const fs = require('fs');
 const crypto = require('crypto');
-const { signData } = require('./lib/crypto');
+const { signData } = require('../lib/crypto');
 
 // Generate Key
 const keys = crypto.generateKeyPairSync('ed25519', {
