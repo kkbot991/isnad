@@ -13,11 +13,13 @@ const args = process.argv.slice(3);
 
 const commands = {
   verify: './isnad-verify.js',
-  v: './isnad-verify.js'
+  v: './isnad-verify.js',
+  sign: './isnad-sign.js',
+  s: './isnad-sign.js'
 };
 
 async function run() {
-  if (!command || command === '--help' || command === '-h') {
+  if (!command || command === '--help' || command === '-h' || command === 'help') {
     console.log(`
 🛡️  Isnad CLI - Decentralized Trust Protocol
 
@@ -26,10 +28,12 @@ Usage:
 
 Commands:
   verify <path>    Verify the signature of a skill manifest
+  sign <path>      Sign a skill manifest (requires private key)
   help             Show this help message
 
 Aliases:
   v -> verify
+  s -> sign
     `);
     process.exit(0);
   }
