@@ -5,6 +5,8 @@
   "main": "index.js",
   "bin": {
     "isnad-verify": "./bin/isnad-verify.js",
+    "isnad-sign": "./bin/isnad-sign.js",
+    "isnad-keygen": "./bin/isnad-keygen.js",
     "isnad": "./bin/isnad.js"
   },
   "scripts": {

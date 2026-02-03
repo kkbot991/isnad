@@ -15,7 +15,9 @@ const commands = {
   verify: './isnad-verify.js',
   v: './isnad-verify.js',
   sign: './isnad-sign.js',
-  s: './isnad-sign.js'
+  s: './isnad-sign.js',
+  keygen: './isnad-keygen.js',
+  k: './isnad-keygen.js'
 };
 
 async function run() {
@@ -29,11 +31,13 @@ Usage:
 Commands:
   verify <path>    Verify the signature of a skill manifest
   sign <path>      Sign a skill manifest (requires private key)
+  keygen [name]    Generate a new Ed25519 keypair (default: isnad.key)
   help             Show this help message
 
 Aliases:
   v -> verify
   s -> sign
+  k -> keygen
     `);
     process.exit(0);
   }
