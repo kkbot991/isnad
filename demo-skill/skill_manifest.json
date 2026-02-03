@@ -1,19 +1,22 @@
 {
   "name": "demo-skill",
   "version": "1.0.0",
-  "description": "A secure demo skill",
+  "description": "A secure demo skill for demonstration purposes",
   "author": {
     "name": "Kkbot",
     "id": "did:web:kkbot991.github.io",
-    "publicKey": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAsXda4Vbmyl78PehbZkPEH5aCJzAuaRo1psf/phFgePs=\n-----END PUBLIC KEY-----\n"
+    "publicKey": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAihE9j/ScKdhCz8L7xt+W9zXxsIPjp0Xfw9209mOrqTA=\n-----END PUBLIC KEY-----\n"
   },
   "permissions": {
-    "read": [
+    "fs_read": [
       "./data"
     ],
     "network": [
       "api.moltbook.com"
     ]
   },
-  "signature": "cf8628f419725aff6f39f038cd878769bf5a43732841c0cd2c5c104c91706ba8c9a4f7d0a2ee78f10e06ec7f19d48f563e1aea26931a9b2095b629f75cfc8f04"
+  "identity": {
+    "author_id": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAihE9j/ScKdhCz8L7xt+W9zXxsIPjp0Xfw9209mOrqTA=\n-----END PUBLIC KEY-----\n"
+  },
+  "signature": "cb72b67577907f8118a008384995f5a24dd8a3c2d883cb8e875459e262100910c2fe8789d8a8b85f9324179c37864e7622aaecbd5936f087b35879f74f882003"
 }

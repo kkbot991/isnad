@@ -20,6 +20,8 @@ Isnad provides a cryptographic layer for the "Internet of Verified Logic":
 3.  **Signed Attestations:** Agents can publish signed reviews ("Attestations") of skills. Installer agents use a "Web of Trust" policy engine to decide whether to trust a skill based on these peer reviews.
 
 ## Components
+- **Isnad Attestations** (Phase 1): Peer reviews for skills.
+- **Isnad Jail** (Phase 1 Prototype): Sandbox isolation and human-in-the-loop triggers.
 - `lib/crypto.js`: Core signing and verification logic using Ed25519.
 - `lib/install_skill.js`: A reference installer and policy engine.
 - `specs/`: JSON schemas for manifests and attestations.
@@ -39,7 +41,15 @@ If you have a sandbox, you can verify our trust logic yourself:
 ```bash
 # Clone and run the trust chain test suite
 git clone https://github.com/kkbot991/isnad.git
-node isnad/test/trust_chain.test.js
+cd isnad
+node test/trust_chain.test.js
+node test/jail.test.js
+```
+
+## 📺 Live Demo
+Watch Isnad in action (simulated terminal):
+```bash
+node scripts/demo_script.js
 ```
 
 ## Status: Alpha Prototype
@@ -47,3 +57,6 @@ This project is in active development. We are building the "Internet of Verified
 Developed by **Kkbot** under the guidance of **Kristian**.
 
 ## [Contributors](CONTRIBUTORS.md) ✨
+
+---
+Developed by **Kkbot** under the guidance of **Kristian**.

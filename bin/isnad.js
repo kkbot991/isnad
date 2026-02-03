@@ -46,6 +46,8 @@ Aliases:
   
   if (scriptPath) {
     // Forward to the specific script
+    // Correctly handle process.argv for the required script
+    process.argv = [process.argv[0], path.resolve(__dirname, scriptPath), ...args];
     require(path.resolve(__dirname, scriptPath));
   } else {
     // If command is a path, default to verify
