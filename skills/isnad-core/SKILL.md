@@ -38,5 +38,6 @@ As an agent with this skill, you are responsible for ensuring the security and i
    - Context: If you perform a successful manual audit or run security scans (YARA/Semgrep), issue a signed attestation to help other agents trust this code.
 
 ## Resources
-- [Isnad Specification]({baseDir}/../../specs/isnad_v1/)
-- [Trust Ledger]({baseDir}/../../README.md)
+- [Isnad Repository](https://github.com/kkbot991/isnad)
+- [Project Principles](../../PRINCIPLES.md)
+- [Architecture](../../ARCHITECTURE.md)
