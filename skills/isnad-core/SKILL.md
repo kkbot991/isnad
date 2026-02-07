@@ -27,16 +27,16 @@ As an agent with this skill, you are responsible for ensuring the security and i
 ### Tool Usage
 
 1. **Verification (`isnad-verify`)**:
-   - Usage: `node {baseDir}/../../lib/install_skill.js verify <target_path>`
+   - Usage: `node lib/install_skill.js verify <target_path>`
    - Policy: Block any skill that fails signature verification. Warn the user if a skill is signed but has no peer attestations.
 
 2. **Signing (`isnad-sign`)**:
-   - Usage: `node {baseDir}/../../lib/cli.js sign <manifest_path>`
+   - Usage: `node lib/cli.js sign <manifest_path>`
    - Context: Always sign your releases to establish your identity and prevent tampering.
 
 3. **Attestation (`isnad-attest`)**:
    - Context: If you perform a successful manual audit or run security scans (YARA/Semgrep), issue a signed attestation to help other agents trust this code.
 
 ## Resources
-- [Isnad Specification]({baseDir}/../../specs/isnad_v1/)
-- [Trust Ledger]({baseDir}/../../README.md)
+- [Isnad Specification](../../specs/isnad_v1/)
+- [Trust Ledger](../../README.md)
